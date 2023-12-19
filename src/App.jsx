@@ -6,7 +6,7 @@ import axios from "axios";
 function App() {
   const [icecreamData, setIcecreamData] = useState([])
   const [deletedFlavor, setdeletedFlavor] = useState({})
-  console.log("icecreamData  ",icecreamData)
+ 
   //connect to api
   useEffect(() => {
     const fetchflavors = async () => {
@@ -31,14 +31,12 @@ function App() {
 
   //handles delete event
   //input : obj to be deleted
-  const deleteFlavor= (icecream)=>{
-    console.log("deleteFlavor",icecream);
+  const deleteFlavor= (icecream)=>{    
     try{
        //call api to delete flavor in db
-        const deleteFlavor = async ()=>{
-           console.log("axios.delete....")
+        const deleteFlavor = async ()=>{          
            const response = await axios.delete(`http://localhost:3000/api/icecream/${icecream.id}`);
-           console.log("deleteFlavor response ",response);
+          
            //update state removing deleted flavor
            updateIcecreamData(icecream);
         }
@@ -53,7 +51,7 @@ function App() {
     const updatedFlavors = icecreamData.filter((flavor)=>{
           return flavor.id != deletedFlavor.id;
     });
-    console.log("updatedFlavors  ",updatedFlavors);
+
     setdeletedFlavor(deletedFlavor);
     setIcecreamData(updatedFlavors);
   }
