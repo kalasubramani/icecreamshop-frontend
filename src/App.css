@@ -1,0 +1,56 @@
+body{
+  background-color: rgb(241, 241, 131);
+}
+.icecreamDiv{
+  display: flex;
+  gap: 50px;
+  padding: 10px 50px;
+  border: 1px solid goldenrod;
+}
+.icecreamHeader {
+  font-weight: bold;
+  display: flex;
+  gap: 20px;
+  padding: 10px 30px;
+  border: 1px solid goldenrod;
+}
+.Container {
+  width: 30%;
+  margin: auto;
+  padding: 10px;
+  border: 2px solid green;
+}
+.errorMessage {
+  font-weight: bold;
+  text-align: center;
+  color: orangered;
+}
+.message{
+  font-weight: bold;
+  text-align: center;
+  color: green;
+}
+h1 {
+  text-align: center;
+}
+.count{
+  font-size: x-small;
+}
+.deleteButton{
+  width:4em;
+  height: 3em;
+  font-size: larger;
+  margin-left: 0 0 0 0px; 
+  border: none;
+  background-color: transparent;
+}
+.deleteDiv{
+  width:1em;
+  padding: 0 0px -1 0px;
+}
+.icecream{
+  width: 4em;
+}
+.icecreamid{
+  width: 2em;
+}
